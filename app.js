@@ -3,7 +3,6 @@ import bodyParser from "body-parser";
 import { getDate, getDay } from "./date.js";
 import mongoose from "mongoose";
 import _ from "lodash";
-import "dotenv/config"
 
 const app = express();
 
@@ -15,7 +14,7 @@ app.use(express.static("public"));
 const mongodbName = process.env.N_KEY;
 const mongodbPassword = process.env.N_SECRET; 
 
-mongoose.connect("mongodb+srv://" + mongodbName + ":" + mongodbPassword + "@cluster0.xkaadtv.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://yogeshprabu28:YogeshMongoDB@cluster0.xkaadtv.mongodb.net/todolistDB");
 
 const itemsSchema = new mongoose.Schema({
   name: String,
