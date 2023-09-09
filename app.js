@@ -11,9 +11,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const mongodbName = process.env.N_KEY;
-const mongodbPassword = process.env.N_SECRET; 
-
 mongoose.connect("mongodb+srv://yogeshprabu28:YogeshMongoDB@cluster0.xkaadtv.mongodb.net/todolistDB");
 
 const itemsSchema = new mongoose.Schema({
